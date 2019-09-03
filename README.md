@@ -22,6 +22,18 @@ eval "$(pyenv virtualenv-init -)"
 ```
 *Pressione CTRL + X para fechar o arquivo e confime para salvar as alterações.
 
+//Teste:
+
+var1='export PATH="/home/pi/.pyenv/bin:$PATH"'
+var2='eval "$(pyenv init -)"'
+var3='eval "$(pyenv virtualenv-init -)"'
+
+echo "" >> ~/.bashrc
+echo $var1 >> ~/.bashrc
+echo $var2 >> ~/.bashrc
+echo $var3 >> ~/.bashrc
+
+
 **Reinicie o shell**
 
 Execute o comando abaixo para carregar a nova configuração:
