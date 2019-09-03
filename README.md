@@ -7,16 +7,11 @@ Execute os comandos abaixo em sequencia no prompt do Raspbian:
 sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2
 ```
 ```bash
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+curl https://pyenv.run | bash
 ```
-```bash
-echo "export PATH='~/.pyenv/bin:$PATH'" >> ~/.bashrc && echo "eval '$(pyenv init -)'" >> ~/.bashrc && echo "eval '$(pyenv virtualenv-init -)'" >> ~/.bashrc
-```
-```bash
-source ~/.bashrc
-```
+**Reinicie o shell para atualizar o PATH**
 
-*nesta etapa selecione a release do Python que preferir:
+Nesta próxima etapa selecione a release do Python que preferir:
 ```bash
 pyenv install 3.5.7 && pyenv global 3.5.7
 ```
