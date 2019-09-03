@@ -4,55 +4,17 @@ Este exemplo instala o Python 3.5.7 e define ele como o global, mas basta altera
 
 Execute os comandos abaixo em sequencia no prompt do Raspbian:
 ```bash
-sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2
-```
-```bash
-curl https://pyenv.run | bash
-```
-
-Abra o arquivo ~/.bashrc para edição com o comando:
-```bash
-sudo nano ~/.bashrc
-```
-Insira as linhas abaixo no final do arquivo:
-```bash
-export PATH="/home/pi/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-```
-*Pressione CTRL + X para fechar o arquivo e confime para salvar as alterações.
-
-//Teste:
-
-var1='export PATH="/home/pi/.pyenv/bin:$PATH"'
-var2='eval "$(pyenv init -)"'
-var3='eval "$(pyenv virtualenv-init -)"'
-
-echo "" >> ~/.bashrc
-echo $var1 >> ~/.bashrc
-echo $var2 >> ~/.bashrc
-echo $var3 >> ~/.bashrc
-
-
-**Reinicie o shell**
-
-Execute o comando abaixo para carregar a nova configuração:
-```bash
-Sourcde ~/.bashrc
-```
-
-Nesta próxima etapa selecione a release do Python que preferir:
-```bash
-pyenv install 3.5.7 && pyenv global 3.5.7
-```
-
-```bash
-git clone https://github.com/alexandremendoncaalvaro/script-install-opencv-raspbian.git ~/script-install-opencv-raspbian && cd ~/script-install-opencv-raspbian
+sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2 && curl https://pyenv.run | bash && git clone https://github.com/alexandremendoncaalvaro/script-install-opencv-raspbian.git ~/script-install-opencv-raspbian && cd ~/script-install-opencv-raspbian
 ```
 
 Após o comando abaixo o Raspberry irá reiniciar sozinho:
 ```bash
 chmod +x *.sh && ./prepare.sh
+```
+
+Nesta próxima etapa selecione a release do Python que preferir:
+```bash
+pyenv install 3.5.7 && pyenv global 3.5.7
 ```
 
 Após reiniciar execute a instalação:
