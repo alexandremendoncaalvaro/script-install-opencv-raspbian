@@ -9,7 +9,25 @@ sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev z
 ```bash
 curl https://pyenv.run | bash
 ```
-**Reinicie o shell para atualizar o PATH**
+
+Abra o arquivo ~/.bashrc para edição com o comando:
+```bash
+sudo nano ~/.bashrc
+```
+Insira as linhas abaixo no final do arquivo:
+```bash
+export PATH="/home/pi/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+*Pressione CTRL + X para fechar o arquivo e confime para salvar as alterações.
+
+**Reinicie o shell**
+
+Execute o comando abaixo para carregar a nova configuração:
+```bash
+Sourcde ~/.bashrc
+```
 
 Nesta próxima etapa selecione a release do Python que preferir:
 ```bash
@@ -27,12 +45,12 @@ chmod +x *.sh && ./prepare.sh
 
 Após reiniciar execute a instalação:
 ```bash
-./install.sh
+~/script-install-opencv-raspbian/install.sh
 ```
 
 Use o comando a seguir para baixar uma foto de exemplo e verificar se está funcionando tanto no python 2 quanto no python 3.
 ```bash
-./test.sh
+~/script-install-opencv-raspbian/test.sh
 ```
 
 *Este tutorial foi adaptado da seguinte fonte:
