@@ -1,7 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -ex
 
 OPENCV_VERSION=4.1.0
+if [ ! -z "$1" ]
+then
+  OPENCV_VERSION=$1
+fi
+
 pushd ~/opencv/opencv-$OPENCV_VERSION
 mkdir -p build
 pushd build

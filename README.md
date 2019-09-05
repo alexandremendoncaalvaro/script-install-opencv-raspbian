@@ -1,6 +1,6 @@
-# OpenCV 4.1.0 - Raspbian Buster #
+# OpenCV and Python Env - Raspbian Buster #
 
-Este exemplo instala o Python 3.5.7 e define ele como o global, mas basta alterar para o release q vc quiser.
+Este exemplo instala o Python 3.5.7 e OpenCV 4.1.0, mas basta alterar para o release q vc quiser.
 
 Execute o comando a seguir no prompt do Raspbian:
 ```bash
@@ -12,14 +12,9 @@ Após o comando abaixo o Raspberry irá reiniciar sozinho:
 chmod +x *.sh && ./prepare.sh
 ```
 
-Nesta próxima etapa selecione a release do Python que preferir:
+Após reiniciar execute a instalação passando a versão do PYTHON e do OPENCV a ser utilizado:
 ```bash
-pyenv install 3.5.7 && pyenv global 3.5.7
-```
-
-Após reiniciar execute a instalação:
-```bash
-~/script-install-opencv-raspbian/install.sh
+~/script-install-opencv-raspbian/install.sh 3.5.7 4.1.0
 ```
 
 Use o comando a seguir para baixar uma foto de exemplo e verificar se está funcionando tanto no python 2 quanto no python 3.
