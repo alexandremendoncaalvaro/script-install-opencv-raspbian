@@ -3,7 +3,7 @@ set -ex
 
 filename=~/.bashrc
 
-if grep -q 'pyenv' filename
+if grep -q 'pyenv' $filename
 then
     echo 'pyenv variables already set'
 else
