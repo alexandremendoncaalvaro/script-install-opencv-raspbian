@@ -4,7 +4,7 @@ Este exemplo instala o Python 3.5.7 e OpenCV 4.1.0, mas basta alterar para o rel
 
 Execute o comando a seguir no prompt do Raspbian:
 ```bash
-sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2 && curl https://pyenv.run | bash && git clone https://github.com/alexandremendoncaalvaro/script-install-opencv-raspbian.git ~/script-install-opencv-raspbian && cd ~/script-install-opencv-raspbian
+sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev git wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2 && git clone https://github.com/alexandremendoncaalvaro/script-install-opencv-raspbian.git ~/script-install-opencv-raspbian && cd ~/script-install-opencv-raspbian
 ```
 
 Após o comando abaixo o Raspberry irá reiniciar sozinho:
