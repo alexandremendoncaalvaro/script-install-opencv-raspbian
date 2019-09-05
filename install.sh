@@ -14,8 +14,13 @@ then
   OPENCV_VERSION=$2
 fi
 
-pyenv install $PYTHON_VERSION
-pyenv global $PYTHON_VERSION
+if pyenv versions | grep $PYTHON_VERSION
+then
+    echo 'pyenv variables already set'
+else
+  pyenv install $PYTHON_VERSION
+  pyenv global $PYTHON_VERSION
+fi
 
 ~/script-install-opencv-raspbian/download-opencv.sh
 ~/script-install-opencv-raspbian/install-deps.sh
