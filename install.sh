@@ -22,9 +22,9 @@ else
   pyenv global $PYTHON_VERSION
 fi
 
-~/script-install-opencv-raspbian/download-opencv.sh
+~/script-install-opencv-raspbian/download-opencv.sh $PYTHON_VERSION
 ~/script-install-opencv-raspbian/install-deps.sh
-~/script-install-opencv-raspbian/build-opencv.sh
+~/script-install-opencv-raspbian/build-opencv.sh $PYTHON_VERSION
 
 cd ~/opencv/opencv-$OPENCV_VERSION/build
 
