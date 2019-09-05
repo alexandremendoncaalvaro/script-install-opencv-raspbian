@@ -41,7 +41,7 @@ fi
 #       -D PYTHON3_EXECUTABLE=$(which python3) \
 #       -D PYTHON_EXECUTABLE=$(which python) \
 
-$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-$OPENCV_VERSION/modules \
     -D ENABLE_NEON=ON \
