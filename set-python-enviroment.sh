@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -ex
 
-curl https://pyenv.run | bash
-
 filename=~/.bashrc
 
 if grep -q 'pyenv' filename
@@ -18,5 +16,7 @@ else
     echo $var2 >> ~/.bashrc
     echo $var3 >> ~/.bashrc
 fi
+
+curl https://pyenv.run | bash
 
 source ~/.bashrc
