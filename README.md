@@ -1,6 +1,6 @@
-# OpenCV and Python Env - Raspbian Buster #
+# OpenCV e Python - Raspbian #
 
-Este exemplo instala o Python 3.5.7 e OpenCV 4.1.0, mas basta alterar para o release q vc quiser.
+Este exemplo instala o Python 3.5.7 e OpenCV 3.4.1, mas basta alterar para o release q vc quiser.
 
 Execute o comando a seguir no prompt do Raspbian:
 ```bash
@@ -14,7 +14,7 @@ chmod +x *.sh && ./prepare.sh
 
 Após reiniciar execute a instalação passando a versão do PYTHON e do OPENCV a ser utilizado:
 ```bash
-~/script-install-opencv-raspbian/install.sh 3.5.7 4.1.0
+~/script-install-opencv-raspbian/install.sh 3.5.7 3.4.4
 ```
 
 Use o comando a seguir para baixar uma foto de exemplo e verificar se está funcionando tanto no python 2 quanto no python 3.
