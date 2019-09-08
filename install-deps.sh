@@ -20,7 +20,7 @@ sudo apt install -y build-essential cmake pkg-config libjpeg-dev libtiff5-dev li
                         libatlas-base-dev libblas-dev libeigen{2,3}-dev liblapack-dev \
                         gfortran \
                         python2.7-dev python3-dev python-pip python3-pip python python3
-sudo pip2 install -U pip
-sudo pip3 install -U pip
-sudo pip2 install numpy
-sudo pip3 install numpy
+pip2 install -U pip
+pip3 install -U pip
+pip2 install numpy
+pip3 install numpy

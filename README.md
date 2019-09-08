@@ -1,6 +1,12 @@
-# OpenCV e Python - Raspbian #
+# Compilação do OpenCV e Python - Raspbian #
 
-Este exemplo instala o Python 3.5.7 e OpenCV 3.4.1, mas basta alterar para o release q vc quiser.
+## Caso queira apenas instalar a última versão do OpenCV disponível (via PIP) ##
+Considerando que já tem o Python3 instalado:
+```bash
+pip install opencv-contrib-python
+```
+
+## Este exemplo instala o Python 3.5.7 e compila o OpenCV 3.4.1, mas basta alterar para o release q vc quiser ##
 
 Execute o comando a seguir no prompt do Raspbian:
 ```bash
