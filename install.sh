@@ -2,7 +2,7 @@
 set -ex
 
 PYTHON_VERSION=3.5.7
-OPENCV_VERSION=4.1.0
+OPENCV_VERSION=3.4.4
 
 if [ ! -z "$1" ]
 then
