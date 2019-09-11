@@ -1,7 +1,7 @@
 # Script to compile specific versions of OpenCV and Python on Raspbian
 
 ## If you just want to use OpenCV default version, use PIP :)
-If you ahead have Python 3 just use:
+If you already have Python 3 just use:
 ```bash
 pip3 install opencv-contrib-python
 ```
