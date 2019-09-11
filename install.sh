@@ -1,8 +1,8 @@
 #!/bin/bash
 set -ex
 
-PYTHON_VERSION=3.5.7
-OPENCV_VERSION=3.4.4
+PYTHON_VERSION=3.7.4
+OPENCV_VERSION=4.1.1
 
 if [ ! -z "$1" ]
 then

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -ex
 
-filename=~/.bashrc
+FILENAME=~/.bashrc
 
-if grep -q 'pyenv' $filename
+if grep -q 'pyenv' $FILENAME
 then
     echo 'pyenv variables already set'
 else
@@ -11,12 +11,18 @@ else
     var2='eval "$(pyenv init -)"'
     var3='eval "$(pyenv virtualenv-init -)"'
 
-    echo "" >> ~/.bashrc
-    echo $var1 >> ~/.bashrc
-    echo $var2 >> ~/.bashrc
-    echo $var3 >> ~/.bashrc
+    echo "" >> $FILENAME
+    echo $var1 >> $FILENAME
+    echo $var2 >> $FILENAME
+    echo $var3 >> $FILENAME
 fi
 
-curl https://pyenv.run | bash
+if [ -z "$PYENV_ROOT" ]; then
+  PYENV_ROOT="${HOME}/.pyenv"
+fi
 
-source ~/.bashrc
+if [ ! -f "$PYENV_ROOT" ]; then
+  curl https://pyenv.run | bash
+fi
+
+source $FILENAME

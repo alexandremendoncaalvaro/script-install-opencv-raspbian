@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-OPENCV_VERSION=3.4.4
+OPENCV_VERSION=4.1.1
 
 if [ ! -z "$1" ]
 then

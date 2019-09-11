@@ -1,32 +1,38 @@
-# Compilação do OpenCV e Python - Raspbian #
+# Script to compile specific versions of OpenCV and Python on Raspbian
 
-## Caso queira apenas instalar a última versão do OpenCV disponível (via PIP) ##
-Considerando que já tem o Python3 instalado:
+## If you just want to use OpenCV default version, use PIP :)
+If you ahead have Python 3 just use:
 ```bash
-pip install opencv-contrib-python
+pip3 install opencv-contrib-python
 ```
 
-## Este exemplo instala o Python 3.5.7 e compila o OpenCV 3.4.1, mas basta alterar para o release q vc quiser ##
+## If you want to specify the versions and compile OpenCV, follow this instructions:
 
-Execute o comando a seguir no prompt do Raspbian:
+**Raspbian command prompt:**
+
+Install requirements and download the script:
 ```bash
 sudo apt-get update && sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev git wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2 && git clone https://github.com/alexandremendoncaalvaro/script-install-opencv-raspbian.git ~/script-install-opencv-raspbian && cd ~/script-install-opencv-raspbian
 ```
 
-Após o comando abaixo o Raspberry irá reiniciar sozinho:
+Authorize the scripts and prepare the Raspberry memory allocation (after this, the Raspberry will restart automatically):
 ```bash
-chmod +x *.sh && ./prepare.sh
+chmod +x *.sh && ./set-python-enviroment.sh && ./prepare.sh
 ```
 
-Após reiniciar execute a instalação passando a versão do PYTHON e do OPENCV a ser utilizado:
+Python and OpenCV installation (specify Python version first and them the OpenCV version):
 ```bash
-~/script-install-opencv-raspbian/install.sh 3.5.7 3.4.4
+cd ~/script-install-opencv-raspbian && ./install.sh 3.7.4 4.1.1
 ```
 
-Use o comando a seguir para baixar uma foto de exemplo e verificar se está funcionando tanto no python 2 quanto no python 3.
+Validate:
 ```bash
-~/script-install-opencv-raspbian/test.sh
+cd ~/script-install-opencv-raspbian && ./test.sh
 ```
 
-*Este tutorial foi adaptado da seguinte fonte:
+*This tutorial are based at this one:
 https://gist.github.com/willprice/abe456f5f74aa95d7e0bb81d5a710b60
+
+
+# Are you a native english speaker?
+No, I am not. If you find typos, grammar errors or whatever please feel free to PR or tell me.

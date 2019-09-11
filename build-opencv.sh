@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-OPENCV_VERSION=3.4.4
+OPENCV_VERSION=4.1.1
 if [ ! -z "$1" ]
 then
   OPENCV_VERSION=$1
@@ -39,16 +39,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D ENABLE_VFPV3=ON \
       -D OPENCV_EXTRA_EXE_LINKER_FLAGS=-latomic \
       -D PYTHON3_EXECUTABLE=$(which python3) \
-      -D PYTHON_EXECUTABLE=$(which python) \
-# cmake -D CMAKE_BUILD_TYPE=RELEASE \
-#     -D CMAKE_INSTALL_PREFIX=/usr/local \
-#     -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-$OPENCV_VERSION/modules \
-#     -D ENABLE_NEON=ON \
-#     -D ENABLE_VFPV3=ON \
-#     -D BUILD_TESTS=OFF \
-#     -D OPENCV_ENABLE_NONFREE=ON \
-#     -D INSTALL_PYTHON_EXAMPLES=OFF \
-#     -D BUILD_EXAMPLES=OFF \
+      -D PYTHON_EXECUTABLE=$(which python2) \
     ..
 
 make -j "$NUM_JOBS"
